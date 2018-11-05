@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Consultas{% endblock %}
+
+{% block page_content %}
+<div class="page-header">    
+    <h2>Ventas</h2>
+    <h3> Cliente:         {{ nombre_completo }} </h3>
+    <h4> Lista de productos comprados: </h4>
+    <ol>
+            
+        {% for producto in productos_por_cliente %}
+        <li>{{ producto }}</li>
+        {%endfor%}
+    </ol>
+    <br>
+    <br>
+    <hr>
+    <h3> Listado de clientes que compraron: {{ nombre_producto }} , código: {{ codigo_producto }}:</h3>
+    
+    <ol>
+        {% for cliente in clientes_por_producto %}
+        <li>{{ cliente }}</li>
+         {% endfor %}
+    </ol>
+    
+</div>
+{% endblock %}

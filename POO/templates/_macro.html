@@ -1,0 +1,40 @@
+{% macro mostrar(valor1,valor2) %}
+
+<h1>valor1</h1>
+<h2>valor2</h2>
+
+{% endmacro %}
+
+
+
+
+
+
+{% macro crear_tabla(campo1,campo2,campo3,campo4,campo5,rango) %}
+
+    
+
+
+     <table class="table table-striped" >
+          <tr>
+            <th>{{ campo1[0] }}</th>
+            <th>{{ campo2[0] }}</th>
+            <th>{{ campo3[0] }}</th>
+            <th>{{ campo4[0] }}</th>
+            <th>{{ campo5[0] }}</th>
+          </tr>
+          
+        {% for num in range(1,rango) %}
+          <tr>
+            <th>{{ campo1[num] }}</th>
+            <th>{{ campo2[num] }}</th>
+            <th>{{ campo3[num] }}</th>
+            <th>{{ campo4[num] }}</th>
+            <th>{{ campo5[num] }}</th>
+          </tr>
+        {% endfor %}
+      </table>        
+ 
+
+{% endmacro %}
+
