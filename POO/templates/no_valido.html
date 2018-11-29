@@ -3,7 +3,9 @@
 {% block title %}Error{% endblock %}
 
 {% block page_content %}
-<div class="page-header">    
+<div class="page-header">
     <h4>{{ mensaje }}</h4>
+    <hr>
+    <button type="button" onclick="history.back()" class="btn btn-primary">volver atrás</button>
 </div>
 {% endblock %}

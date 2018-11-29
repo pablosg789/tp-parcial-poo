@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="page-header">
+        <h1> CANTIDAD DE PRODUCTOS VENDIDOS </h1>
+        <br>
+        <hr>
+        <br>
+
+        <table class="table table-striped" >
+            <tr>
+                <th class="warning">PRODUCTO</th>
+                <th class="warning">CANTIDAD</th>
+            </tr>
+                {% for num in range(rango) %}
+                <tr>
+                  <th> {{ lista_productos[num] }}</th>
+                  <th> {{ lista_cantidad[num] }}</th>
+
+                </tr>
+                {% endfor %}
+        </table>
+        <hr>
+
+        <button type="button" onclick="history.back()" class="btn btn-primary">volver atrás</button>
+    </div>
+
+
+{% endblock %}

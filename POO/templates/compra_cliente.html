@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="page-header">
+        <h2>REGISTRO DE COMPRA POR CLIENTE </h2>
+        <br>
+        <h3> Cliente:   {{ nombre_completo }} </h3>
+        <br>
+        <h4> Productos comprados: </h4>
+        <hr>
+        <br>
+
+        <table class="table table-striped" >
+            <tr>
+                <th class="warning">CODIGO</th>
+                <th class="warning">NOMBRE</th>
+            </tr>
+                {% for num in range(rango) %}
+                <tr>
+                  <th>{{ codigo[num] }}</th>
+                  <th>{{ producto[num] }}</th>
+
+                </tr>
+                {% endfor %}
+        </table>
+        <hr>
+
+        <button type="button" onclick="history.back()" class="btn btn-primary">volver atrás</button>
+    </div>
+
+
+{% endblock %}

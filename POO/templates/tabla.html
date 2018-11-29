@@ -2,49 +2,79 @@
 
 {% block content %}
 
-    <div class="page-header">    
-        <h2>TABLA DE VENTAS</h2>
+    <div class="page-header">
+    <a name='tabla'></a>
+        <h1>TABLA DE VENTAS</h1>
+        <br>
+        <br>
+
+        <a href="#consultas" class="btn btn-info" role="button">Consultas</a>
     </div>
-    <hr>
+    <br>
     <div>
         {% from '_macro.html' import crear_tabla %}
 
         {{ crear_tabla( campo1,campo2,campo3,campo4,campo5,rango) }}
-        
+
     </div>
     <hr>
+    <br><br>
     <div>
-        <form action="/consulta" method="POST">
-            <p>CONSULTA POR CLIENTE:</p>            
-            <input type="text" name="nombre" placeholder="Nombre" >
-            <input type="text" name="apellido" placeholder="Apellido">
-            <br>
-            <br>
-            <p>CONSULTA POR PRODCUTO:</p>
-            <input type="text" name="codigo" placeholder="Código del prodcuto" >
-            
-            <hr>
-            <input type="submit" value="CONSULTAR">
-            <hr>
-        </form>
-        <p>PRODUCTOS MAS VENDIDOS</p>
-        
-            <u>
-            {% for num in producto_cantidad %}
-                
-            <li>{{num}}</li>
+        <a name='consultas'></a>
+        <h2>CONSULTAS : </h2>
+        <br>
+        <br>
+        <div>
+          <form class="form-inline" role="form" action="/compra_cliente" method="POST">
+              <h3>PRODUCTOS COMPRADOS POR CLIENTE:</h3>
+              <div class="form-group">
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre" >
+              </div>
+              <div class="form-group">
+                <input type="text" name="apellido" class="form-control" placeholder="Apellido">
+              </div>
+              <input type="submit" class="btn btn-default" value="CONSULTAR">
+          </form>
 
-            {% endfor %}
-            </u>
-        <hr>
-        <p>INGRESOS POR CLIENTES</p>
-        <u>
-            {% for num in cliente_gasto %}
-                
-            <li>{{num}}</li>
+            <br><hr>
 
-            {% endfor %}
-            </u>
+          <form class="form-inline" role="form" action="/clientes_por_producto" method="POST">
+              <h3>LISTADO DE CLIENTES POR PRODUCTO:</h3>
+              <div class="form-group">
+                <input type="text" name="codigo" class="form-control" placeholder="Código del prodcuto" >
+              </div>
+              <input type="submit" class="btn btn-default" value="CONSULTAR">
+          </form>
+
+        </div>
+        <br><hr>
+
+        <div class="">
+
+          <form class="form-horizontal" role="form" action="/mejores_clientes" method="POST">
+            <div class="form-group">
+
+                    <button type="submit" class="btn btn-success">CLIENTES QUE MAS GASTARON</button>
+
+              </div>
+          </form>
+          <hr>
+
+          <form class="form-horizontal"  action="productos_mas_vendidos" method="POST">
+            <div class="form-group">
+
+                  <button type="submit" class="btn btn-success">PRODUCTOS MAS VENDIDOS</button>
+
+
+            </div>
+
+          </form>
+
+          <br><br>
+          <a href="#tabla" class="btn btn-info" role="button">TABLA DE VENTAS</a>
+          <br>
+      </div>
+
     </div>
 
 {% endblock %}

@@ -1,8 +1,9 @@
-CODIGO;PRODUCTO;CLIENTE;CANTIDAD;PRECIO;
-DCD354;Thompson Blue;Camila Fernandez;68;0.87;
-ZAW341;Algoma Yellow;Jane Gomez;52;0.52;
-QOC596;Lukken Crimson;Paula Elliott;54;6.92;
-ZPV820;Melrose Aquamarine ;Miguel Perez;58;7.70;
-VWN878;Starling Turquoise;Angel Carmona;22;5.44;
-VWN896;Starling Aquamarine;Mariano Alvarez;22;5.44;
-ZPV834;Melrose Turquoise ;Nicolas Heredia;49;7.70;
+CODIGO,PRODUCTO,CLIENTE,CANTIDAD,PRECIO
+DCD354,Thompson Blue,Camila Fernandez,68,0.87
+ZAW341,Algoma Yellow,Jane Gomez,52,0.52
+QOC596,Lukken Crimson,Paula Elliott,54,6.92
+ZPV820,Melrose Aquamarine ,Miguel Perez,58,7.70
+VWN878,Starling Turquoise,Angel Carmona,22,5.44
+VWN896,Starling Aquamarine,Mariano Alvarez,22,5.44
+ZPV834,Melrose Turquoise ,Nicolas Heredia,49,7.70
+DCD354,Thompson Blue,Nicolas Heredia,80,0.75
